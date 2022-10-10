@@ -1,0 +1,43 @@
+#ifndef PAIN_LOCAL_WINDOW_H
+#define PAIN_LOCAL_WINDOW_H
+
+#include <string>
+#include <vector>
+
+class PainLocalWindow {
+public:
+    PainLocalWindow();
+    ~PainLocalWindow();
+
+    std::string getPartOfTheBodyLocalization();
+    std::string getClarification();
+    std::string getSide();
+    std::string getSurface();
+    std::string getIntensity();
+    std::string getCharacter();
+    std::string getPartOfTheBodyIrradiation();
+    std::string getLocalization();
+    const std::vector<std::string> &getPainLocalData();
+
+    void setPartOfTheBodyLocalization(std::string time);
+    void setClarification(std::string occurrence);
+    void setSide(std::string manifestation);
+    void setSurface(std::string revealed);
+    void setIntensity(std::string time);
+    void setCharacter(std::string medicalFacility);
+    void setPartOfTheBodyIrradiation(std::string time);
+    void setLocalization(std::string type);
+
+private:
+    std::string _partOfTheBodyLocalization;
+    std::string _clarification;
+    std::string _side;
+    std::string _surface;
+    std::string _intensity;
+    std::string _character;
+    std::string _partOfTheBodyIrradiation;
+    std::string _localization;
+    std::vector<std::string> _painLocalData;
+};
+
+#endif // PAIN_LOCAL_WINDOW_H
